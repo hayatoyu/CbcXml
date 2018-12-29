@@ -14,7 +14,7 @@ namespace CbcXml
         public ReportingEntity reportingEntity { get; set; }
 
         [XmlElement(ElementName = "CbcReports")]
-        public CbcReports cbcReports { get; set; }
+        public List<CbcReports> cbcReports { get; set; }
 
         [XmlElement(ElementName = "AdditionalInfo")]
         public List<AdditionalInfo> addtionalInfo { get; set; }
@@ -38,6 +38,7 @@ namespace CbcXml
 
                 public IN _in {get;set;}
                 
+                [XmlElement(ElementName = "Name")]
                 public List<string> Name { get; set; }
 
                 [XmlElement(ElementName = "Address")]
@@ -131,9 +132,8 @@ namespace CbcXml
 
                 [XmlElement(ElementName = "Earnings")]
                 public Earnings earnings { get; set; }
-
-                [XmlElement(ElementName = "NbEmployees")]
-                public NbEmployees nbEmployees { get; set; }
+                
+                public string NbEmployees { get; set; }
                 
                 [XmlElement(ElementName = "Assets")]
                 public Assets assets { get; set; }
@@ -197,11 +197,7 @@ namespace CbcXml
                     [XmlText]
                     public string value { get; set; }
                 }
-                public class NbEmployees : CurrCode
-                {
-                    [XmlText]
-                    public string value { get; set; }
-                }
+                
                 public class Assets : CurrCode
                 {
                     [XmlText]
@@ -216,6 +212,7 @@ namespace CbcXml
 
                 public string IncorpCountryCode { get; set; }
 
+                [XmlElement(ElementName = "BizActivities")]
                 public List<string> BizActivities { get; set; }
 
                 public string OtherEntityInfo { get; set; }

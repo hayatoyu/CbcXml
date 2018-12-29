@@ -10,8 +10,8 @@ using System.Xml.Serialization;
 
 namespace CbcXml
 {
-    [XmlRoot(Namespace = "CBC")]
-    [XmlType(Namespace ="CBC",TypeName ="CBC_OECD")]
+    [XmlRoot(Namespace = "urn:oecd:ties:cbc:v1")]
+    [XmlType(Namespace = "urn:oecd:ties:cbc:v1")]
     public class MessageSpec
     {
         public string SendingEntityIN { get; set; }
