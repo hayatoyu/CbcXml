@@ -36,7 +36,8 @@ namespace CbcXml
                 [XmlElement(ElementName = "TIN")]
                 public TIN tin { get; set; }
 
-                public IN _in {get;set;}
+                [XmlElement(ElementName = "IN")]
+                public List<IN> _in {get;set;}
                 
                 [XmlElement(ElementName = "Name")]
                 public List<string> Name { get; set; }

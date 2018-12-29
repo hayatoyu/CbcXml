@@ -30,7 +30,7 @@ namespace CbcXml
             else
             {
                 // 將錯誤訊息寫入txt檔案
-                string path = System.Environment.CurrentDirectory + @"\" + new DateTime().ToString("yyyyMMdd_HHmmss") + ".txt";
+                string path = System.Environment.CurrentDirectory + @"\" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".txt";
                 using (StreamWriter outputFile = new StreamWriter(path, false, Encoding.UTF8))
                 {
                     outputFile.WriteLine(stbr.ToString());

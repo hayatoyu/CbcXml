@@ -277,7 +277,7 @@ namespace CbcXml
                                     tempEntity.address.addressFix = new CbcBody.ReportingEntity.Entity.Address.AddressFix();
                                     tempEntity.Name = new List<string>();
                                     tempEntity.tin = new CbcBody.ReportingEntity.Entity.TIN();
-                                    tempEntity._in = new CbcBody.ReportingEntity.Entity.IN();
+                                    tempEntity._in = new List<CbcBody.ReportingEntity.Entity.IN>();
 
                                     // TIN
                                     cell = row.GetCell(0);
@@ -297,8 +297,10 @@ namespace CbcXml
                                     if(cell != null)
                                     {
                                         cell.SetCellType(CellType.String);
-                                        tempEntity._in.issuedBy = countryCode;
-                                        tempEntity._in.value = cell.StringCellValue;                                        
+                                        var tempIN = new CbcBody.ReportingEntity.Entity.IN();
+                                        tempIN.issuedBy = countryCode;
+                                        tempIN.value = cell.StringCellValue;
+                                        tempEntity._in.Add(tempIN);                                        
                                     }
 
                                     // Name
