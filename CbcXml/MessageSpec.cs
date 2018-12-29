@@ -37,47 +37,6 @@ namespace CbcXml
          * Timestamp
          *      YYYY-MM-DD'T'HH:mm:ss(不確定有沒有帶毫秒和'Z')
          */
-
-        public string Validation()
-        {
-            StringBuilder stbr = new StringBuilder();
-            Commons commons = Commons.getInstance();
-            DateTime date = new DateTime();
-            
-
-            // SendingEntityIN
-            if (string.IsNullOrEmpty(SendingEntityIN))
-                stbr.AppendLine("MessageSpecSendingEntityIN 為 空");
-
-            // TransmittingCountry
-            if (!commons.countries.Exists(x => x.Equals(TransmittingCountry)))
-                stbr.AppendLine("TransmittingCountry 不在列表中");
-
-            // ReceivingCountry
-            if (!commons.countries.Exists(x => x.Equals(ReceivingCountry)))
-                stbr.AppendLine("ReceivingCountry 不在列表中");
-
-            // MessageType
-            if (!MessageType.Equals("CBC"))
-                stbr.AppendLine("MessageType 只能為 CBC");
-
-            // Language
-            if (!Language.Equals("EN") && !Language.Equals("ZH"))
-                stbr.AppendLine("Language 不為 EN 或 ZH");
-
-            // MessageTypeIndic
-            if (!MessageTypeIndic.Equals("CBC401") && !MessageTypeIndic.Equals("CBC402"))
-                stbr.AppendLine("MessageTypeIndic 只能為 CBC401 或 CBC402");
-
-            // ReportingPeriod
-            if (!DateTime.TryParse(ReportingPeriod, out date))
-                stbr.AppendLine("ReportingPeriod 不是合法日期格式");
-
-            // TimeStamp
-            if (!DateTime.TryParse(Timestamp, out date))
-                stbr.AppendLine("Timestamp 不是合法日期格式");
-
-            return stbr.ToString();
-        }
+        
     }
 }

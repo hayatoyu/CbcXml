@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Schema;
+using System.IO;
 
 namespace CbcXml
 {
@@ -26,6 +27,15 @@ namespace CbcXml
 
             if (isSuccess)
                 Console.WriteLine("驗證成功");
+            else
+            {
+                // 將錯誤訊息寫入txt檔案
+                string path = System.Environment.CurrentDirectory + @"\" + new DateTime().ToString("yyyyMMdd_HHmmss") + ".txt";
+                using (StreamWriter outputFile = new StreamWriter(path, false, Encoding.UTF8))
+                {
+                    outputFile.WriteLine(stbr.ToString());
+                }
+            }
         }
 
         public void xmlSettingsValidationEventHandler(object sender,ValidationEventArgs e)
