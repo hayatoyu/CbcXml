@@ -26,7 +26,7 @@ namespace CbcXml
                     XmlValidator validator = new XmlValidator();
 
                     validator.Validate(@"C:\Users\51942\Documents\會計處報稅\CbcXML_v1.0.1.xsd"
-                        , @"C:\Users\51942\Source\Repos\CbcXml\CbcXml\bin\Debug\cbc-report_20181229T18_21_07.xml"
+                        , @"C:\Users\51942\Source\Repos\CbcXml\CbcXml\bin\Debug\cbc-report_20181229T19_08_22.xml"
                         , "urn:oecd:ties:cbc:v1");
                 }
                 else if (input.Equals("2"))
@@ -61,7 +61,7 @@ namespace CbcXml
                         cBC_OECD.MessageSpec.MessageRefId = "TW-03036306-" + DateTime.Today.ToString("yyyy") + "CBC" + "0001";
                         cBC_OECD.MessageSpec.MessageTypeIndic = "CBC401";
                         cBC_OECD.MessageSpec.ReportingPeriod = "2017-12-31";
-                        cBC_OECD.MessageSpec.Timestamp = DateTime.Now.ToString("yyyyMMdd'T'HH:mm:ss.ssssss'Z'");
+                        cBC_OECD.MessageSpec.Timestamp = DateTime.Now.ToString("yyyy-MM-dd'T'HH:mm:ss'Z'");
                         #endregion
 
                         // 設定 CbcBody/ReportingEntity
@@ -278,6 +278,9 @@ namespace CbcXml
                                     tempEntity.Name = new List<string>();
                                     tempEntity.tin = new CbcBody.ReportingEntity.Entity.TIN();
                                     tempEntity._in = new List<CbcBody.ReportingEntity.Entity.IN>();
+
+                                    // ResCountryCode
+                                    tempEntity.ResCountryCode = countryCode;
 
                                     // TIN
                                     cell = row.GetCell(0);

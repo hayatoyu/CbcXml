@@ -78,6 +78,7 @@ namespace CbcXml
 
                     public string AddressFree { get; set; }
 
+                    
                     public class AddressFix
                     {
                         public string Street { get; set; }
@@ -89,6 +90,19 @@ namespace CbcXml
                         public string PostCode { get; set; }
                         public string City { get; set; }
                         public string CountrySubentity { get; set; }
+
+                        public AddressFix()
+                        {
+                            Street = string.Empty;
+                            BuildingIdentifier = string.Empty;
+                            SuiteIdentifier = string.Empty;
+                            FloorIdentifier = string.Empty;
+                            DistrictName = string.Empty;
+                            POB = string.Empty;
+                            PostCode = string.Empty;
+                            City = string.Empty;
+                            CountrySubentity = string.Empty;
+                        }
                     }
                 }
             }
