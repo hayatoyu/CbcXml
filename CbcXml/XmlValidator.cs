@@ -11,6 +11,7 @@ namespace CbcXml
     class XmlValidator
     {
         private bool isSuccess = true;
+        StringBuilder stbr = new StringBuilder();
         
         public void Validate(string xsdPath,string xmlPath,string nameSpace)
         {
@@ -31,14 +32,12 @@ namespace CbcXml
         {
             if(e.Severity == XmlSeverityType.Warning)
             {
-                Console.WriteLine("WARNING: ");
-                Console.WriteLine(e.Message);
+                stbr.AppendLine("WARNING: ").AppendLine(e.Message);                
                 isSuccess = false;
             }
             else if (e.Severity == XmlSeverityType.Error)
             {
-                Console.WriteLine("ERROR: ");
-                Console.WriteLine(e.Message);
+                stbr.AppendLine("ERROR: ").AppendLine(e.Message);                
                 isSuccess = false;
             }
             

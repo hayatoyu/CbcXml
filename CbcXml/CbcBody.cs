@@ -10,24 +10,37 @@ namespace CbcXml
 {
     public class CbcBody
     {
+        [XmlElement(ElementName = "ReportingEntity")]
         public ReportingEntity reportingEntity { get; set; }
+
+        [XmlElement(ElementName = "CbcReports")]
         public CbcReports cbcReports { get; set; }
-        public AdditionalInfo addtionalInfo { get; set; }
+
+        [XmlElement(ElementName = "AdditionalInfo")]
+        public List<AdditionalInfo> addtionalInfo { get; set; }
 
         public class ReportingEntity
         {
+            [XmlElement(ElementName = "Entity")]
             public Entity entity { get; set; }
+
             public string ReportingRole { get; set; }
+
+            [XmlElement(ElementName = "DocSpec")]
             public DocSpec docSpec { get; set; }
 
             public class Entity
             {
                 public string ResCountryCode { get; set; }
-                
+
+                [XmlElement(ElementName = "TIN")]
                 public TIN tin { get; set; }
 
+                public IN _in {get;set;}
+                
                 public List<string> Name { get; set; }
 
+                [XmlElement(ElementName = "Address")]
                 public Address address { get; set; }
 
                 public class TIN
@@ -38,6 +51,18 @@ namespace CbcXml
                     [XmlText]
                     public string tin { get; set; }
                 }
+
+                public class IN
+                {
+                    [XmlAttribute]
+                    public string issuedBy { get; set; }
+
+                    [XmlAttribute]
+                    public string INType { get; set; }
+
+                    [XmlText]
+                    public string value { get; set; }
+                }
                 
                 public class Address
                 {
@@ -46,7 +71,10 @@ namespace CbcXml
 
                     public string CountryCode { get; set; }
 
+                    [XmlElement(ElementName = "AddressFix")]
                     public AddressFix addressFix { get; set; }
+
+                    public string AddressFree { get; set; }
 
                     public class AddressFix
                     {
@@ -73,30 +101,41 @@ namespace CbcXml
 
         public class CbcReports
         {
+            [XmlElement(ElementName = "DocSpec")]
             public ReportingEntity.DocSpec docSpec { get; set; }
 
             public string ResCountryCode { get; set; }
 
+            [XmlElement(ElementName = "Summary")]
             public Summary summary { get; set; }
 
+            [XmlElement(ElementName = "ConstEntities")]
             public List<ConstEntities> constEntities {get;set;}
 
             public class Summary
             {
+                [XmlElement(ElementName = "Revenues")]
                 public Revenues revenues { get; set; }                
                 
+                [XmlElement(ElementName = "ProfitOrLoss")]
                 public ProfitOrLoss profitOrLoss { get; set; } 
 
+                [XmlElement(ElementName = "TaxPaid")]
                 public TaxPaid taxPaid { get; set; }
 
+                [XmlElement(ElementName = "TaxAccrued")]
                 public TaxAccrued taxAccrued { get; set; }
 
+                [XmlElement(ElementName = "Capital")]
                 public Capital capital { get; set; }
 
+                [XmlElement(ElementName = "Earnings")]
                 public Earnings earnings { get; set; }
 
+                [XmlElement(ElementName = "NbEmployees")]
                 public NbEmployees nbEmployees { get; set; }
                 
+                [XmlElement(ElementName = "Assets")]
                 public Assets assets { get; set; }
 
                 public class CurrCode
@@ -106,10 +145,13 @@ namespace CbcXml
                 }
                 public class Revenues
                 {
+                    [XmlElement(ElementName = "Unrelated")]
                     public Unrelated unrelated { get; set; }
 
+                    [XmlElement(ElementName = "Related")]
                     public Related related { get; set; }
 
+                    [XmlElement(ElementName = "Total")]
                     public Total total { get; set; }
 
                     public class Unrelated : CurrCode
@@ -167,6 +209,27 @@ namespace CbcXml
                 }
             }
 
+            public class ConstEntities
+            {
+                [XmlElement(ElementName = "ConstEntity")]
+                public ReportingEntity.Entity constEntity { get; set; }
+
+                public string IncorpCountryCode { get; set; }
+
+                public List<string> BizActivities { get; set; }
+
+                public string OtherEntityInfo { get; set; }
+
+
+            }
+        }
+
+        public class AdditionalInfo
+        {
+            public ReportingEntity.DocSpec DocSpec { get; set; }
+            public string OtherInfo { get; set; }
+            public string ResCountryCode { get; set; }
+            public string SummaryRef { get; set; }
         }
     }
 }
