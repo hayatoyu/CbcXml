@@ -25,13 +25,13 @@ namespace CbcXml
                 {
                     XmlValidator validator = new XmlValidator();
 
-                    validator.Validate(@"C:\Users\51942\Documents\會計處報稅\CbcXML_v1.0.1.xsd"
-                        , @"C:\Users\51942\Source\Repos\CbcXml\CbcXml\bin\Debug\cbc-report_20181229T19_08_22.xml"
+                    validator.Validate("CbcXML_v1.0.1.xsd"
+                        , @"C:\Users\余\Source\Repos\CbcXml\CbcXml\bin\Debug\cbc-report_20181231T19_36_19.xml"
                         , "urn:oecd:ties:cbc:v1");
                 }
                 else if (input.Equals("2"))
                 {
-                    string excelPath = @"C:\Users\51942\Documents\會計處報稅\106年度國別報告書.xls";
+                    string excelPath = "106年度國別報告書.xls";
 
                     HSSFWorkbook wb = null;
                     ISheet sheet = null;
@@ -53,12 +53,12 @@ namespace CbcXml
                         // 設定 Message Spec
                         #region 設定 MessageSpec
                         cBC_OECD.MessageSpec = new MessageSpec();
-                        cBC_OECD.MessageSpec.SendingEntityIN = "03036306";
+                        cBC_OECD.MessageSpec.SendingEntityIN = "0303630-6";
                         cBC_OECD.MessageSpec.TransmittingCountry = "TW";
-                        cBC_OECD.MessageSpec.ReceivingCountry = "TW";
+                        cBC_OECD.MessageSpec.ReceivingCountry = "GB";
                         cBC_OECD.MessageSpec.MessageType = "CBC";
                         cBC_OECD.MessageSpec.Language = "EN";
-                        cBC_OECD.MessageSpec.MessageRefId = "TW-03036306-" + DateTime.Today.ToString("yyyy") + "CBC" + "0001";
+                        cBC_OECD.MessageSpec.MessageRefId = "TW-0303630-6-" + DateTime.Today.ToString("yyyy") + "CBC" + "0001";
                         cBC_OECD.MessageSpec.MessageTypeIndic = "CBC401";
                         cBC_OECD.MessageSpec.ReportingPeriod = "2017-12-31";
                         cBC_OECD.MessageSpec.Timestamp = DateTime.Now.ToString("yyyy-MM-dd'T'HH:mm:ss'Z'");
@@ -76,7 +76,7 @@ namespace CbcXml
                         cBC_OECD.CbcBody.reportingEntity.docSpec = new CbcBody.ReportingEntity.DocSpec();
                         cBC_OECD.CbcBody.reportingEntity.entity.ResCountryCode = "TW";
                         cBC_OECD.CbcBody.reportingEntity.entity.tin.issuedBy = "TW";
-                        cBC_OECD.CbcBody.reportingEntity.entity.tin.tin = "03036306";
+                        cBC_OECD.CbcBody.reportingEntity.entity.tin.tin = "0303630-6";
                         cBC_OECD.CbcBody.reportingEntity.entity.Name.Add("The Shanghai Commercial and Savings Bank,Ltd.");
                         cBC_OECD.CbcBody.reportingEntity.entity.address.legalAddressType = "OECD303";
                         cBC_OECD.CbcBody.reportingEntity.entity.address.CountryCode = "TW";
@@ -84,7 +84,7 @@ namespace CbcXml
                         cBC_OECD.CbcBody.reportingEntity.entity.address.addressFix.City = "Taipei";
                         cBC_OECD.CbcBody.reportingEntity.ReportingRole = "CBC701";
                         cBC_OECD.CbcBody.reportingEntity.docSpec.DocTypeIndic = "OECD1";
-                        cBC_OECD.CbcBody.reportingEntity.docSpec.DocRefId = "03036306-" + DateTime.Now.ToString("yyyyMMdd") + "-200";
+                        cBC_OECD.CbcBody.reportingEntity.docSpec.DocRefId = "0303630-6-" + DateTime.Now.ToString("yyyy-MMdd") + "-200";
                         #endregion
 
                         // 先處理 Summary
@@ -100,7 +100,7 @@ namespace CbcXml
                             var temp = new CbcBody.CbcReports();
                             temp.docSpec = new CbcBody.ReportingEntity.DocSpec();
                             temp.docSpec.DocTypeIndic = "OECD1";
-                            temp.docSpec.DocRefId = "03036306-" + DateTime.Now.ToString("yyyyMMdd") + "-" + countryCode;
+                            temp.docSpec.DocRefId = "0303630-6-" + DateTime.Now.ToString("yyyy-MMdd") + "-" + countryCode;
                             temp.ResCountryCode = countryCode;
                             temp.summary = new CbcBody.CbcReports.Summary();
                             temp.summary.revenues = new CbcBody.CbcReports.Summary.Revenues();
@@ -447,6 +447,7 @@ namespace CbcXml
                 }
                 else if (input.Equals("q"))
                 {
+                    Console.WriteLine("請按Enter鍵離開");
                     break;
                 }
             }
