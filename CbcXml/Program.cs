@@ -50,6 +50,7 @@ namespace CbcXml
                     {
                         wb = new HSSFWorkbook(fs);
                         numofSheet = wb.NumberOfSheets;
+                        string cBCID = string.Empty;
                         // 設定 Message Spec
                         #region 設定 MessageSpec
                         cBC_OECD.MessageSpec = new MessageSpec();
@@ -58,7 +59,12 @@ namespace CbcXml
                         cBC_OECD.MessageSpec.ReceivingCountry = "GB";
                         cBC_OECD.MessageSpec.MessageType = "CBC";
                         cBC_OECD.MessageSpec.Language = "EN";
-                        cBC_OECD.MessageSpec.MessageRefId = "TW-0303630-6-" + DateTime.Today.ToString("yyyy") + "CBC" + "0001";
+                        //cBC_OECD.MessageSpec.MessageRefId = "TW-0303630-6-" + DateTime.Today.ToString("yyyy") + "CBC" + "0001";
+                        /*
+                         * MessageRefID格式：
+                         *  SJ + Year + RJ + CbcId[15] + MessageTypeIndic + TimeStamp(yyyyMMdd'T'HHmmss) + Unique Identifier
+                         */
+                        cBC_OECD.MessageSpec.MessageRefId = "TW2017GB" + cBCID + "CBC401" + DateTime.Now.ToString("yyyyMMdd'T'HHmmss") + "001";
                         cBC_OECD.MessageSpec.MessageTypeIndic = "CBC401";
                         cBC_OECD.MessageSpec.ReportingPeriod = "2017-12-31";
                         cBC_OECD.MessageSpec.Timestamp = DateTime.Now.ToString("yyyy-MM-dd'T'HH:mm:ss'Z'");
