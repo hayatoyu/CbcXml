@@ -18,10 +18,10 @@ namespace CbcXml
         {
             Console.WriteLine("1. 驗證\n2. 產生xml");
             string input;
-            while(true)
+            while (true)
             {
                 input = Console.ReadLine();
-                if(input.Equals("1"))
+                if (input.Equals("1"))
                 {
                     XmlValidator validator = new XmlValidator();
 
@@ -50,11 +50,11 @@ namespace CbcXml
                     {
                         wb = new HSSFWorkbook(fs);
                         numofSheet = wb.NumberOfSheets;
-                        string cBCID = string.Empty;
+                        string cBCID = "XBCBC1000000023";
                         // 設定 Message Spec
                         #region 設定 MessageSpec
                         cBC_OECD.MessageSpec = new MessageSpec();
-                        cBC_OECD.MessageSpec.SendingEntityIN = "0303630-6";
+                        cBC_OECD.MessageSpec.SendingEntityIN = cBCID;
                         cBC_OECD.MessageSpec.TransmittingCountry = "TW";
                         cBC_OECD.MessageSpec.ReceivingCountry = "GB";
                         cBC_OECD.MessageSpec.MessageType = "CBC";
@@ -64,7 +64,7 @@ namespace CbcXml
                          * MessageRefID格式：
                          *  SJ + Year + RJ + CbcId[15] + MessageTypeIndic + TimeStamp(yyyyMMdd'T'HHmmss) + Unique Identifier
                          */
-                        cBC_OECD.MessageSpec.MessageRefId = "TW2017GB" + cBCID + "CBC401" + DateTime.Now.ToString("yyyyMMdd'T'HHmmss") + "001";
+                        cBC_OECD.MessageSpec.MessageRefId = "GB2017GB" + cBCID + "CBC401" + DateTime.Now.ToString("yyyyMMdd'T'HHmmss") + "001";
                         cBC_OECD.MessageSpec.MessageTypeIndic = "CBC401";
                         cBC_OECD.MessageSpec.ReportingPeriod = "2017-12-31";
                         cBC_OECD.MessageSpec.Timestamp = DateTime.Now.ToString("yyyy-MM-dd'T'HH:mm:ss'Z'");
@@ -90,7 +90,9 @@ namespace CbcXml
                         cBC_OECD.CbcBody.reportingEntity.entity.address.addressFix.City = "Taipei";
                         cBC_OECD.CbcBody.reportingEntity.ReportingRole = "CBC701";
                         cBC_OECD.CbcBody.reportingEntity.docSpec.DocTypeIndic = "OECD1";
-                        cBC_OECD.CbcBody.reportingEntity.docSpec.DocRefId = "0303630-6-" + DateTime.Now.ToString("yyyy-MMdd") + "-200";
+                        cBC_OECD.CbcBody.reportingEntity.docSpec.DocRefId = cBC_OECD.MessageSpec.MessageRefId + "_" +
+                            cBC_OECD.CbcBody.reportingEntity.entity.tin.tin +
+                            cBC_OECD.CbcBody.reportingEntity.docSpec.DocTypeIndic + "-200";
                         #endregion
 
                         // 先處理 Summary
@@ -98,7 +100,7 @@ namespace CbcXml
                         sheet = wb.GetSheetAt(0);
                         row = sheet.GetRow(rowIndex);
                         cBC_OECD.CbcBody.cbcReports = new List<CbcBody.CbcReports>();
-                        while(row != null)
+                        while (row != null)
                         {
                             // CountryCode
                             cell = row.GetCell(0);
@@ -106,7 +108,12 @@ namespace CbcXml
                             var temp = new CbcBody.CbcReports();
                             temp.docSpec = new CbcBody.ReportingEntity.DocSpec();
                             temp.docSpec.DocTypeIndic = "OECD1";
-                            temp.docSpec.DocRefId = "0303630-6-" + DateTime.Now.ToString("yyyy-MMdd") + "-" + countryCode;
+                            //temp.docSpec.DocRefId = "0303630-6-" + DateTime.Now.ToString("yyyy-MMdd") + "-" + countryCode;
+                            /*
+                             * DocRefId 的格式是 MessageRefId + "_" + TIN + DocTypeIndic + Group Element(Country Code)
+                             */
+                            temp.docSpec.DocRefId = cBC_OECD.MessageSpec.MessageRefId + "_" + cBC_OECD.CbcBody.reportingEntity.entity.tin.tin +
+                                temp.docSpec.DocTypeIndic + countryCode;
                             temp.ResCountryCode = countryCode;
                             temp.summary = new CbcBody.CbcReports.Summary();
                             temp.summary.revenues = new CbcBody.CbcReports.Summary.Revenues();
@@ -122,9 +129,9 @@ namespace CbcXml
 
                             // Unrelated
                             cell = row.GetCell(1);
-                            if(cell != null)
+                            if (cell != null)
                             {
-                                cell.SetCellType(CellType.String);                                
+                                cell.SetCellType(CellType.String);
                                 temp.summary.revenues.unrelated.value = cell.StringCellValue;
                             }
                             else
@@ -135,7 +142,7 @@ namespace CbcXml
 
                             // Related
                             cell = row.GetCell(2);
-                            if(cell != null)
+                            if (cell != null)
                             {
                                 cell.SetCellType(CellType.String);
                                 temp.summary.revenues.related.value = cell.StringCellValue;
@@ -252,7 +259,7 @@ namespace CbcXml
                             cBC_OECD.CbcBody.cbcReports.Add(temp);
                             rowIndex++;
                             row = sheet.GetRow(rowIndex);
-                            
+
                         }
                         #endregion
 
@@ -261,7 +268,7 @@ namespace CbcXml
                          * 接著對每個 CbcReports 加入 ConstEntities
                          */
                         #region 對每個CbcReports加入ConstEntities
-                        for (int i = 1;i < numofSheet;i++)
+                        for (int i = 1; i < numofSheet; i++)
                         {
                             string countryCode;
                             rowIndex = 1;
@@ -270,10 +277,10 @@ namespace CbcXml
 
                             var cbcReports = cBC_OECD.CbcBody.cbcReports.Where(c => c.ResCountryCode.Equals(countryCode)).FirstOrDefault();
                             cbcReports.constEntities = new List<CbcBody.CbcReports.ConstEntities>();
-                            if(cbcReports != null)
-                            {                                
+                            if (cbcReports != null)
+                            {
                                 row = sheet.GetRow(rowIndex);
-                                while(row != null)
+                                while (row != null)
                                 {
                                     var tempEntity = new CbcBody.ReportingEntity.Entity();
                                     var tempEntities = new CbcBody.CbcReports.ConstEntities();
@@ -290,9 +297,9 @@ namespace CbcXml
 
                                     // TIN
                                     cell = row.GetCell(0);
-                                    if(cell != null)
+                                    if (cell != null)
                                     {
-                                        cell.SetCellType(CellType.String);                                        
+                                        cell.SetCellType(CellType.String);
                                         tempEntity.tin.tin = cell.StringCellValue;
                                     }
                                     else
@@ -303,13 +310,13 @@ namespace CbcXml
 
                                     // IN
                                     cell = row.GetCell(1);
-                                    if(cell != null)
+                                    if (cell != null)
                                     {
                                         cell.SetCellType(CellType.String);
                                         var tempIN = new CbcBody.ReportingEntity.Entity.IN();
                                         tempIN.issuedBy = countryCode;
                                         tempIN.value = cell.StringCellValue;
-                                        tempEntity._in.Add(tempIN);                                        
+                                        tempEntity._in.Add(tempIN);
                                     }
 
                                     // Name
@@ -318,10 +325,10 @@ namespace CbcXml
                                     tempEntity.Name.Add(cell.StringCellValue);
 
                                     // Street
-                                    cell = row.GetCell(3);                                    
+                                    cell = row.GetCell(3);
                                     tempEntity.address.legalAddressType = "OECD303";
                                     tempEntity.address.CountryCode = countryCode;
-                                    if(cell != null)
+                                    if (cell != null)
                                     {
                                         cell.SetCellType(CellType.String);
                                         tempEntity.address.addressFix.Street = cell.StringCellValue;
@@ -329,7 +336,7 @@ namespace CbcXml
 
                                     // Building
                                     cell = row.GetCell(4);
-                                    if(cell != null)
+                                    if (cell != null)
                                     {
                                         cell.SetCellType(CellType.String);
                                         tempEntity.address.addressFix.BuildingIdentifier = cell.StringCellValue;
@@ -337,7 +344,7 @@ namespace CbcXml
 
                                     // Suite
                                     cell = row.GetCell(5);
-                                    if(cell != null)
+                                    if (cell != null)
                                     {
                                         cell.SetCellType(CellType.String);
                                         tempEntity.address.addressFix.SuiteIdentifier = cell.StringCellValue;
@@ -345,7 +352,7 @@ namespace CbcXml
 
                                     // Floor
                                     cell = row.GetCell(6);
-                                    if(cell != null)
+                                    if (cell != null)
                                     {
                                         cell.SetCellType(CellType.String);
                                         tempEntity.address.addressFix.FloorIdentifier = cell.StringCellValue;
@@ -353,7 +360,7 @@ namespace CbcXml
 
                                     // DistrictName
                                     cell = row.GetCell(7);
-                                    if(cell != null)
+                                    if (cell != null)
                                     {
                                         cell.SetCellType(CellType.String);
                                         tempEntity.address.addressFix.DistrictName = cell.StringCellValue;
@@ -361,7 +368,7 @@ namespace CbcXml
 
                                     // POB
                                     cell = row.GetCell(8);
-                                    if(cell != null)
+                                    if (cell != null)
                                     {
                                         cell.SetCellType(CellType.String);
                                         tempEntity.address.addressFix.POB = cell.StringCellValue;
@@ -369,7 +376,7 @@ namespace CbcXml
 
                                     // PostCode
                                     cell = row.GetCell(9);
-                                    if(cell != null)
+                                    if (cell != null)
                                     {
                                         cell.SetCellType(CellType.String);
                                         tempEntity.address.addressFix.PostCode = cell.StringCellValue;
@@ -377,7 +384,7 @@ namespace CbcXml
 
                                     // City
                                     cell = row.GetCell(10);
-                                    if(cell != null)
+                                    if (cell != null)
                                     {
                                         cell.SetCellType(CellType.String);
                                         tempEntity.address.addressFix.City = cell.StringCellValue;
@@ -385,7 +392,7 @@ namespace CbcXml
 
                                     // CountrySubEntity
                                     cell = row.GetCell(11);
-                                    if(cell != null)
+                                    if (cell != null)
                                     {
                                         cell.SetCellType(CellType.String);
                                         tempEntity.address.addressFix.CountrySubentity = cell.StringCellValue;
@@ -393,15 +400,15 @@ namespace CbcXml
 
                                     // BizActivities
                                     cell = row.GetCell(12);
-                                    if(cell != null)
+                                    if (cell != null)
                                     {
                                         cell.SetCellType(CellType.String);
-                                        tempEntities.BizActivities.Add(cell.StringCellValue);                                        
+                                        tempEntities.BizActivities.Add(cell.StringCellValue);
                                     }
 
                                     // OtherEntityInfo
                                     cell = row.GetCell(13);
-                                    if(cell != null)
+                                    if (cell != null)
                                     {
                                         cell.SetCellType(CellType.String);
                                         tempEntities.OtherEntityInfo = cell.StringCellValue;
@@ -415,12 +422,12 @@ namespace CbcXml
 
                                     rowIndex++;
                                     row = sheet.GetRow(rowIndex);
-                                   
+
                                 }
-                                
-                                
-                                
-                                
+
+
+
+
                             }
                         }
                         #endregion
@@ -443,12 +450,12 @@ namespace CbcXml
                         }
                         Console.WriteLine("Xml 序列化完成");
                     }
-                    catch(Exception e)
+                    catch (Exception e)
                     {
                         Console.WriteLine(e.Message);
                     }
 
-                    
+
 
                 }
                 else if (input.Equals("q"))
@@ -463,7 +470,7 @@ namespace CbcXml
         private static string Currency(string countryCode)
         {
             string currency = string.Empty;
-            switch(countryCode)
+            switch (countryCode)
             {
                 case "TW":
                     currency = "TWD";
