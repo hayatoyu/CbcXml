@@ -16,22 +16,31 @@ namespace CbcXml
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("1. 驗證\n2. 產生xml");
+            Console.WriteLine("1. 驗證\n2. 產生xml\nq. 離開");
             string input;
+            DirectoryInfo currDir = new DirectoryInfo(System.Environment.CurrentDirectory);
             while (true)
             {
                 input = Console.ReadLine();
                 if (input.Equals("1"))
                 {
                     XmlValidator validator = new XmlValidator();
-
+                    FileInfo[] fileInfos = currDir.GetFiles();
+                    string xmlpath = fileInfos.Where(f => f.Extension.Equals(".xml"))
+                        .OrderByDescending(f => f.LastWriteTime)
+                        .FirstOrDefault().FullName;
+                    
+                    /*
                     validator.Validate("CbcXML_v1.0.1.xsd"
                         , @"C:\Users\余\Source\Repos\CbcXml\CbcXml\bin\Debug\cbc-report_20181231T19_36_19.xml"
-                        , "urn:oecd:ties:cbc:v1");
+                        , "urn:oecd:ties:cbc:v1");*/
+                    validator.Validate(@"CbC schema v1.0.1\CbcXML_v1.0.1.xsd",xmlpath,"urn:oecd:ties:cbc:v1");
                 }
                 else if (input.Equals("2"))
                 {
-                    string excelPath = "106年度國別報告書.xls";
+
+                    string excelPath = currDir.GetFiles().Where(f => f.Extension.Contains(".xls"))
+                        .OrderByDescending(f => f.LastWriteTime).FirstOrDefault().FullName;
 
                     HSSFWorkbook wb = null;
                     ISheet sheet = null;
