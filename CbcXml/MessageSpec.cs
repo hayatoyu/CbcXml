@@ -21,7 +21,17 @@ namespace CbcXml
         public string Language { get; set; }
         public string Warning { get; set; }     // Optional
         public string Contact { get; set; }     // Optional
-        public string MessageRefId { get; set; }
+        public string MessageRefId
+        {
+            get
+            {
+                return "GB" + ReportingPeriod.Substring(0, 4) + "GB" + SendingEntityIN + MessageTypeIndic + DateTime.Now.ToString("yyyyMMdd'T'hhmmss") + "001";
+            }
+            set
+            {
+
+            }
+        }
         public string MessageTypeIndic { get; set; }
         public string ReportingPeriod { get; set; }
         public string Timestamp { get; set; }

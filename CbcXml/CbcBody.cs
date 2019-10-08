@@ -157,6 +157,11 @@ namespace CbcXml
                 {
                     [XmlAttribute]
                     public string currCode { get; set; }
+
+                    public CurrCode()
+                    {
+                        currCode = "TWD";
+                    }
                 }
                 public class Revenues
                 {
@@ -173,50 +178,68 @@ namespace CbcXml
                     {                        
                         [XmlText]
                         public string value { get; set; }
+                        
+                        public Unrelated() : base() { }
                     }
 
                     public class Related : CurrCode
                     {                        
                         [XmlText]
                         public string value { get; set; }
+
+                        public Related() : base() { }                        
                     }
 
                     public class Total : CurrCode
                     {                        
                         [XmlText]
                         public string value { get; set; }
+
+                        public Total() : base() { }
                     }
                 }
                 public class ProfitOrLoss : CurrCode
                 {
                     [XmlText]
                     public string value { get; set; }
+
+                    public ProfitOrLoss() : base() { }
                 }
                 public class TaxPaid : CurrCode
                 {
                     [XmlText]
                     public string value { get; set; }
+
+                    public TaxPaid() : base() { }
                 }
                 public class TaxAccrued : CurrCode
                 {
                     [XmlText]
                     public string value;
+
+                    public TaxAccrued() : base() { }
                 }
                 public class Capital : CurrCode
                 {
                     [XmlText]
                     public string value { get; set; }
+
+                    public Capital() : base() { }
                 }
                 public class Earnings : CurrCode
                 {
                     [XmlText]
                     public string value { get; set; }
+
+                    public Earnings() : base() { }
                 }
                 
                 public class Assets : CurrCode
                 {
                     [XmlText]
                     public string value { get; set; }
+
+                    public Assets() : base() { }
                 }
             }
 
