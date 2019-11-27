@@ -41,6 +41,13 @@ namespace CbcXml
 
                     string excelPath = currDir.GetFiles().Where(f => f.Extension.Contains(".xls"))
                         .OrderByDescending(f => f.LastWriteTime).FirstOrDefault().FullName;
+                    string year = "",firstOrModify = "";
+                    
+                    Console.WriteLine("請輸入年份(西元年)：");
+                    year = Console.ReadLine();
+
+                    Console.WriteLine("請輸入此為第幾次傳遞：\n 1. 首次\n 2. 修正");
+                    firstOrModify = Console.ReadLine();
 
                     HSSFWorkbook wb = null;
                     ISheet sheet = null;
@@ -75,8 +82,11 @@ namespace CbcXml
                          *  (已寫在屬性裡)
                          */
                         //cBC_OECD.MessageSpec.MessageRefId = "GB2017GB" + cBCID + "CBC401" + DateTime.Now.ToString("yyyyMMdd'T'HHmmss") + "001";
-                        cBC_OECD.MessageSpec.MessageTypeIndic = "CBC402";
-                        cBC_OECD.MessageSpec.ReportingPeriod = "2017-12-31";
+                        if (firstOrModify.Equals("1"))
+                            cBC_OECD.MessageSpec.MessageTypeIndic = "CBC401";
+                        else
+                            cBC_OECD.MessageSpec.MessageTypeIndic = "CBC402";
+                        cBC_OECD.MessageSpec.ReportingPeriod = $"{year}-12-31";
                         cBC_OECD.MessageSpec.Timestamp = DateTime.Now.ToString("yyyy-MM-dd'T'HH:mm:ss'Z'");
                         #endregion
 
@@ -99,7 +109,10 @@ namespace CbcXml
                         cBC_OECD.CbcBody.reportingEntity.entity.address.addressFix.Street = "65 Cornhill";
                         cBC_OECD.CbcBody.reportingEntity.entity.address.addressFix.City = "London";
                         cBC_OECD.CbcBody.reportingEntity.ReportingRole = "CBC701";
-                        cBC_OECD.CbcBody.reportingEntity.docSpec.DocTypeIndic = "OECD2";
+                        if (firstOrModify.Equals("1"))
+                            cBC_OECD.CbcBody.reportingEntity.docSpec.DocTypeIndic = "OECD1";
+                        else
+                            cBC_OECD.CbcBody.reportingEntity.docSpec.DocTypeIndic = "OECD2";
                         cBC_OECD.CbcBody.reportingEntity.docSpec.DocRefId = cBC_OECD.MessageSpec.MessageRefId +
                             "_03036306" + cBC_OECD.CbcBody.reportingEntity.docSpec.DocTypeIndic + "ENTTW";
                         #endregion
@@ -116,7 +129,10 @@ namespace CbcXml
                             string countryCode = cell.StringCellValue;
                             var temp = new CbcBody.CbcReports();
                             temp.docSpec = new CbcBody.ReportingEntity.DocSpec();
-                            temp.docSpec.DocTypeIndic = "OECD2";
+                            if (firstOrModify.Equals("1"))
+                                temp.docSpec.DocTypeIndic = "OECD1";
+                            else
+                                temp.docSpec.DocTypeIndic = "OECD2";
                             //temp.docSpec.DocRefId = "0303630-6-" + DateTime.Now.ToString("yyyy-MMdd") + "-" + countryCode;
                             /*
                              * DocRefId 的格式是 MessageRefId + "_" + TIN + DocTypeIndic + Group Element(Country Code)
