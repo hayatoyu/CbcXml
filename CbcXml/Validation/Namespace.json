@@ -1,0 +1,14 @@
+{
+  "NameSpaceList": 
+  [
+
+    {
+      "CountryCode": "HK",
+      "Namespace": "http://www.ird.gov.hk/AEOI/cbc/v1"
+    },
+    {
+      "CountryCode": "GB",
+      "Namespace": "urn:oecd:ties:cbc:v1"
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:stf="http://www.ird.gov.hk/AEOI/cbctypes/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ird.gov.hk/AEOI/cbctypes/v1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<!--+++++++++++++++++++++++  Reusable Simple types ++++++++++++++++++++++++++++++++++++++ -->
+	<!-- -->
+	<!-- CbC ID Type -->
+	<xsd:simpleType name="CbcId_Type">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Data type for CbC ID.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[A-Z]{2}[0-9]{5}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- -->
+	<!-- 20-character string -->
+	<xsd:simpleType name="Char20_Type">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="20"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- -->
+	<!-- 30-character string -->
+	<xsd:simpleType name="Char30_Type">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="30"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- -->
+	<!-- 35-character string -->
+	<xsd:simpleType name="Char35_Type">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- -->
+	<!-- 40-character string -->
+	<xsd:simpleType name="Char40_Type">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="40"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- -->
+	<!-- 70-character string -->
+	<xsd:simpleType name="Char70_Type">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="70"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- -->
+	<!-- 80-character string -->
+	<xsd:simpleType name="Char80_Type">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="80"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- -->
+	<!-- 100-character string -->
+	<xsd:simpleType name="Char100_Type">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="100"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- -->
+	<!-- 120-character string -->
+	<xsd:simpleType name="Char120_Type">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="120"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- -->
+	<!-- 150-character string -->
+	<xsd:simpleType name="Char150_Type">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="150"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- -->
+	<!-- 4000-character string -->
+	<xsd:simpleType name="Char4000_Type">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="4000"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- -->
+    <!-- 8-digit integer -->
+    <xsd:simpleType name="Integer8_Type">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Data type for an integer with 8 digits.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:integer">
+			<xsd:totalDigits value="8"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+    <!-- -->
+    <!-- 30-digit integer -->
+    <xsd:simpleType name="Integer30_Type">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Data type for an integer with 30 digits, especially monetary amounts.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:integer">
+			<xsd:totalDigits value="30"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+    <!-- -->
+	<!-- File Serial Number -->
+	<xsd:simpleType name="FileSerialNumber_Type">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Data type for File Serial Number.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[0-9]{8}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- -->
+	<!-- Document type indicators types -->
+	<xsd:simpleType name="OECDDocTypeIndic_EnumType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">This element specifies the type of data being submitted.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="OECD1">
+				<xsd:annotation>
+					<xsd:documentation>New Data</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="OECD2">
+				<xsd:annotation>
+					<xsd:documentation>Corrected Data</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="OECD3">
+				<xsd:annotation>
+					<xsd:documentation>Deletion of Data</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="OECD11">
+				<xsd:annotation>
+					<xsd:documentation>New Test Data</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="OECD12">
+				<xsd:annotation>
+					<xsd:documentation>Corrected Test Data</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="OECD13">
+				<xsd:annotation>
+					<xsd:documentation>Deletion of Test Data</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- -->
+	<!-- Type of the address considered from a legal point of view -->
+	<xsd:simpleType name="OECDLegalAddressType_EnumType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">This is a datatype for an attribute to an address. It serves to indicate the legal character of that address (residential, business etc.)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="OECD301">
+				<xsd:annotation>
+					<xsd:documentation>residentialOrBusiness</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="OECD302">
+				<xsd:annotation>
+					<xsd:documentation>residential</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="OECD303">
+				<xsd:annotation>
+					<xsd:documentation>business</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="OECD304">
+				<xsd:annotation>
+					<xsd:documentation>registeredOffice</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="OECD305">
+				<xsd:annotation>
+					<xsd:documentation>unspecified</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- -->
+	<!--++++++++++++++++++ Reusable Complex types +++++++++++++++++++++++++++++++++++++ -->
+    <!-- -->
+	<!-- Document specification: Data identifying and describing the document -->
+	<xsd:complexType name="DocSpec_Type">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Document specification: Data identifying and describing the document, where 'document' here means the part of a message that is to transmit the data about a single block of CBC information. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="DocTypeIndic" type="stf:OECDDocTypeIndic_EnumType"/>
+			<xsd:element name="DocRefId" type="stf:Char40_Type">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Sender's unique identifier of this document </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="CorrFileSerialNumber" type="stf:FileSerialNumber_Type" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">File Serial Number given by IRD when acknowledging receipt of the data file previously submitted to the CbC Reporting Portal containing the record to be corrected / deleted </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="CorrDocRefId" type="stf:Char40_Type" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Reference ID of the document referred to if this is correction / deletion </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- -->
+</xsd:schema>

@@ -1,0 +1,1339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cbc:CBC_OECD xmlns:stf="urn:oecd:ties:stf:v4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oecd:ties:cbc:v1 CbcXML_v1.0.1.xsd" version="1.0.1" xmlns:cbc="urn:oecd:ties:cbc:v1">
+  <cbc:MessageSpec>
+    <cbc:SendingEntityIN>XBCBC1000000023</cbc:SendingEntityIN>
+    <cbc:TransmittingCountry>GB</cbc:TransmittingCountry>
+    <cbc:ReceivingCountry>GB</cbc:ReceivingCountry>
+    <cbc:MessageType>CBC</cbc:MessageType>
+    <cbc:Language>EN</cbc:Language>
+    <cbc:MessageRefId>GB2018GBXBCBC1000000023CBC40120191121T095113001</cbc:MessageRefId>
+    <cbc:MessageTypeIndic>CBC401</cbc:MessageTypeIndic>
+    <cbc:ReportingPeriod>2018-12-31</cbc:ReportingPeriod>
+    <cbc:Timestamp>2019-11-21T09:51:13Z</cbc:Timestamp>
+  </cbc:MessageSpec>
+  <cbc:CbcBody>
+    <cbc:ReportingEntity>
+      <cbc:Entity>
+        <cbc:ResCountryCode>GB</cbc:ResCountryCode>
+        <cbc:TIN issuedBy="GB">2367000221</cbc:TIN>
+        <cbc:Name>Shanghai Commercial Bank Limited</cbc:Name>
+        <cbc:Address legalAddressType="OECD303">
+          <cbc:CountryCode>GB</cbc:CountryCode>
+          <cbc:AddressFix>
+            <cbc:Street>65 Cornhill</cbc:Street>
+            <cbc:BuildingIdentifier />
+            <cbc:SuiteIdentifier />
+            <cbc:FloorIdentifier />
+            <cbc:DistrictName />
+            <cbc:POB />
+            <cbc:PostCode />
+            <cbc:City>London</cbc:City>
+            <cbc:CountrySubentity />
+          </cbc:AddressFix>
+        </cbc:Address>
+      </cbc:Entity>
+      <cbc:ReportingRole>CBC701</cbc:ReportingRole>
+      <cbc:DocSpec>
+        <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+        <stf:DocRefId>GB2018GBXBCBC1000000023CBC40120191121T095113001_03036306OECD1ENTTW</stf:DocRefId>
+      </cbc:DocSpec>
+    </cbc:ReportingEntity>
+    <cbc:CbcReports>
+      <cbc:DocSpec>
+        <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+        <stf:DocRefId>GB2018GBXBCBC1000000023CBC40120191121T095113001_03036306OECD1REPTW</stf:DocRefId>
+      </cbc:DocSpec>
+      <cbc:ResCountryCode>TW</cbc:ResCountryCode>
+      <cbc:Summary>
+        <cbc:Revenues>
+          <cbc:Unrelated currCode="TWD">29228013</cbc:Unrelated>
+          <cbc:Related currCode="TWD">507621</cbc:Related>
+          <cbc:Total currCode="TWD">29735634</cbc:Total>
+        </cbc:Revenues>
+        <cbc:ProfitOrLoss currCode="TWD">10764815</cbc:ProfitOrLoss>
+        <cbc:TaxPaid currCode="TWD">1262956</cbc:TaxPaid>
+        <cbc:TaxAccrued currCode="TWD">1373410</cbc:TaxAccrued>
+        <cbc:Capital currCode="TWD">43116464</cbc:Capital>
+        <cbc:Earnings currCode="TWD">23532760</cbc:Earnings>
+        <cbc:NbEmployees>2812</cbc:NbEmployees>
+        <cbc:Assets currCode="TWD">12299274</cbc:Assets>
+      </cbc:Summary>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>TW</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="TW">03036306</cbc:TIN>
+          <cbc:IN issuedBy="TW">081840009</cbc:IN>
+          <cbc:Name>The Shanghai Commercial and Savings Bank,Ltd.</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>TW</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>149, Min Sheng E. Rd., Sec. 2</cbc:Street>
+              <cbc:BuildingIdentifier />
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier>03-12</cbc:FloorIdentifier>/>
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City>Taipei</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>TW</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC509</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Ultimate Parent Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>TW</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="TW">27534339</cbc:TIN>
+          <cbc:IN issuedBy="TW">070506038</cbc:IN>
+          <cbc:Name>SCSB Marketing,Ltd.</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>TW</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>87,Zhengzhou Rd.</cbc:Street>
+              <cbc:BuildingIdentifier />
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier>6</cbc:FloorIdentifier>
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City>Taipei</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>TW</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC505</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>TW</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="TW">27998908</cbc:TIN>
+          <cbc:IN issuedBy="TW">110721807</cbc:IN>
+          <cbc:Name>SCSB Asset Management Ltd.</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>TW</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>319,Sec. 4,Bade Rd.</cbc:Street>
+              <cbc:BuildingIdentifier />
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier>2</cbc:FloorIdentifier>
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City>Taipei</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>TW</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC509</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>TW</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="TW">16779223</cbc:TIN>
+          <cbc:IN issuedBy="TW">081840005</cbc:IN>
+          <cbc:Name>SCSB Life Insurance Agency</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>TW</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>149,Sec. 2,Minsheng E Rd.</cbc:Street>
+              <cbc:BuildingIdentifier />
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier>2</cbc:FloorIdentifier>
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City>Taipei</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>TW</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC509</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>TW</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="TW">16778358</cbc:TIN>
+          <cbc:IN issuedBy="TW">081840004</cbc:IN>
+          <cbc:Name>SCSB Property Insurance Agency</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>TW</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>149,Sec. 2,Minsheng E Rd.</cbc:Street>
+              <cbc:BuildingIdentifier />
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier>2</cbc:FloorIdentifier>
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City>Taipei</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>TW</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC509</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>TW</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="TW">11921405</cbc:TIN>
+          <cbc:IN issuedBy="TW">150704588</cbc:IN>
+          <cbc:Name>China Travel Service(Taiwan)</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>TW</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>54,Linsen N Rd.</cbc:Street>
+              <cbc:BuildingIdentifier />
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier>1</cbc:FloorIdentifier>
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City>Taipei</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>TW</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC507</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>TW</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="TW">28466458</cbc:TIN>
+          <cbc:IN issuedBy="TW">150704935</cbc:IN>
+          <cbc:Name>CTS Travel International Ltd.</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>TW</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>50,Linsen N Rd.</cbc:Street>
+              <cbc:BuildingIdentifier />
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier>3</cbc:FloorIdentifier>
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City>Taipei</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>TW</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC507</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+    </cbc:CbcReports>
+    <cbc:CbcReports>
+      <cbc:DocSpec>
+        <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+        <stf:DocRefId>GB2018GBXBCBC1000000023CBC40120191121T095113001_03036306OECD1REPCN</stf:DocRefId>
+      </cbc:DocSpec>
+      <cbc:ResCountryCode>CN</cbc:ResCountryCode>
+      <cbc:Summary>
+        <cbc:Revenues>
+          <cbc:Unrelated currCode="TWD">1617438</cbc:Unrelated>
+          <cbc:Related currCode="TWD">3495</cbc:Related>
+          <cbc:Total currCode="TWD">1620933</cbc:Total>
+        </cbc:Revenues>
+        <cbc:ProfitOrLoss currCode="TWD">677278</cbc:ProfitOrLoss>
+        <cbc:TaxPaid currCode="TWD">134433</cbc:TaxPaid>
+        <cbc:TaxAccrued currCode="TWD">169401</cbc:TaxAccrued>
+        <cbc:Capital currCode="TWD">7094534</cbc:Capital>
+        <cbc:Earnings currCode="TWD">1888925</cbc:Earnings>
+        <cbc:NbEmployees>81</cbc:NbEmployees>
+        <cbc:Assets currCode="TWD">9765</cbc:Assets>
+      </cbc:Summary>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>CN</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="CN">NOTIN</cbc:TIN>
+          <cbc:Name>SCSB Leasing(China) Co., Ltd</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>CN</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>No. 161 Lu Jia Zui Rd(E).</cbc:Street>
+              <cbc:BuildingIdentifier>China Merchants Tower</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier>1301</cbc:SuiteIdentifier>
+              <cbc:FloorIdentifier>13</cbc:FloorIdentifier>
+              <cbc:DistrictName>Pu Dong</cbc:DistrictName>
+              <cbc:POB />
+              <cbc:PostCode>200120</cbc:PostCode>
+              <cbc:City>Shanghai</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>CN</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC509</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>CN</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="CN">NOTIN</cbc:TIN>
+          <cbc:Name>Shanghai Commercial Bank Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>CN</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>No. 161 Lu Jia Zui Rd(E).</cbc:Street>
+              <cbc:BuildingIdentifier>China Merchants Tower</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier>913</cbc:SuiteIdentifier>
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName>Pu Dong</cbc:DistrictName>
+              <cbc:POB />
+              <cbc:PostCode>200120</cbc:PostCode>
+              <cbc:City>Shanghai</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>CN</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC509</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>CN</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="CN">NOTIN</cbc:TIN>
+          <cbc:Name>Shanghai Commercial Bank Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>CN</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>No. 1 Zhong Xin Si Road</cbc:Street>
+              <cbc:BuildingIdentifier>Tower One,Kerry Plaza</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier>01-03</cbc:SuiteIdentifier>
+              <cbc:FloorIdentifier>20</cbc:FloorIdentifier>
+              <cbc:DistrictName>Futian</cbc:DistrictName>
+              <cbc:POB />
+              <cbc:PostCode>518048</cbc:PostCode>
+              <cbc:City>Shengzhen</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>CN</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC509</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+    </cbc:CbcReports>
+    <cbc:CbcReports>
+      <cbc:DocSpec>
+        <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+        <stf:DocRefId>GB2018GBXBCBC1000000023CBC40120191121T095113001_03036306OECD1REPLR</stf:DocRefId>
+      </cbc:DocSpec>
+      <cbc:ResCountryCode>LR</cbc:ResCountryCode>
+      <cbc:Summary>
+        <cbc:Revenues>
+          <cbc:Unrelated currCode="TWD">2002</cbc:Unrelated>
+          <cbc:Related currCode="TWD">3937</cbc:Related>
+          <cbc:Total currCode="TWD">5939</cbc:Total>
+        </cbc:Revenues>
+        <cbc:ProfitOrLoss currCode="TWD">-7104</cbc:ProfitOrLoss>
+        <cbc:TaxPaid currCode="TWD">0</cbc:TaxPaid>
+        <cbc:TaxAccrued currCode="TWD">0</cbc:TaxAccrued>
+        <cbc:Capital currCode="TWD">63781</cbc:Capital>
+        <cbc:Earnings currCode="TWD">617856</cbc:Earnings>
+        <cbc:NbEmployees>3</cbc:NbEmployees>
+        <cbc:Assets currCode="TWD">0</cbc:Assets>
+      </cbc:Summary>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>LR</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="LR">NOTIN</cbc:TIN>
+          <cbc:Name>Wresqueue Limitada</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>LR</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>80 Broad Street</cbc:Street>
+              <cbc:BuildingIdentifier />
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City>Monrovia</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>LR</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC511</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>LR</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="LR">NOTIN</cbc:TIN>
+          <cbc:Name>Shancom Reconstruction Inc.</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>LR</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>80 Broad Street</cbc:Street>
+              <cbc:BuildingIdentifier />
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City>Monrovia</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>LR</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC511</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>LR</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="LR">NOTIN</cbc:TIN>
+          <cbc:Name>Safehaven Investment Corp.</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>LR</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>80 Broad Street</cbc:Street>
+              <cbc:BuildingIdentifier />
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City>Monrovia</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>LR</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC511</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+    </cbc:CbcReports>
+    <cbc:CbcReports>
+      <cbc:DocSpec>
+        <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+        <stf:DocRefId>GB2018GBXBCBC1000000023CBC40120191121T095113001_03036306OECD1REPUS</stf:DocRefId>
+      </cbc:DocSpec>
+      <cbc:ResCountryCode>US</cbc:ResCountryCode>
+      <cbc:Summary>
+        <cbc:Revenues>
+          <cbc:Unrelated currCode="TWD">4712880</cbc:Unrelated>
+          <cbc:Related currCode="TWD">6547</cbc:Related>
+          <cbc:Total currCode="TWD">4719427</cbc:Total>
+        </cbc:Revenues>
+        <cbc:ProfitOrLoss currCode="TWD">2666231</cbc:ProfitOrLoss>
+        <cbc:TaxPaid currCode="TWD">745599</cbc:TaxPaid>
+        <cbc:TaxAccrued currCode="TWD">758866</cbc:TaxAccrued>
+        <cbc:Capital currCode="TWD">784618</cbc:Capital>
+        <cbc:Earnings currCode="TWD">13071627</cbc:Earnings>
+        <cbc:NbEmployees>90</cbc:NbEmployees>
+        <cbc:Assets currCode="TWD">221100</cbc:Assets>
+      </cbc:Summary>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>US</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="US">NOTIN</cbc:TIN>
+          <cbc:Name>Prosperity Realty Inc.</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>US</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>231 Sansome Street</cbc:Street>
+              <cbc:BuildingIdentifier />
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode>94104</cbc:PostCode>
+              <cbc:City>San Francisco</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>US</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC513</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>US</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="US">NOTIN</cbc:TIN>
+          <cbc:Name>Shanghai Commercial Bank Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>US</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>231 Sansome Street</cbc:Street>
+              <cbc:BuildingIdentifier />
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode>94104</cbc:PostCode>
+              <cbc:City>San Francisco</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>US</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC509</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>US</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="US">NOTIN</cbc:TIN>
+          <cbc:Name>Shanghai Commercial Bank Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>US</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>125 East 56th Street</cbc:Street>
+              <cbc:BuildingIdentifier />
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode>10022</cbc:PostCode>
+              <cbc:City>New York</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>US</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC509</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>US</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="US">NOTIN</cbc:TIN>
+          <cbc:Name>Shanghai Commercial Bank Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>US</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>383 East Valley Boulevard</cbc:Street>
+              <cbc:BuildingIdentifier>Alhambra</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode>91801</cbc:PostCode>
+              <cbc:City>California</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>US</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC509</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>US</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="US">NOTIN</cbc:TIN>
+          <cbc:Name>Shacom Property(NY),Inc.</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>US</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>125 East 56th Street</cbc:Street>
+              <cbc:BuildingIdentifier />
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode>10022</cbc:PostCode>
+              <cbc:City>New York</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>US</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC513</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>US</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="US">NOTIN</cbc:TIN>
+          <cbc:Name>Shacom Property(CA),Inc.</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>US</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>231 Sansome Street</cbc:Street>
+              <cbc:BuildingIdentifier />
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode>94104</cbc:PostCode>
+              <cbc:City>San Francisco</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>US</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC513</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+    </cbc:CbcReports>
+    <cbc:CbcReports>
+      <cbc:DocSpec>
+        <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+        <stf:DocRefId>GB2018GBXBCBC1000000023CBC40120191121T095113001_03036306OECD1REPGB</stf:DocRefId>
+      </cbc:DocSpec>
+      <cbc:ResCountryCode>GB</cbc:ResCountryCode>
+      <cbc:Summary>
+        <cbc:Revenues>
+          <cbc:Unrelated currCode="TWD">357629</cbc:Unrelated>
+          <cbc:Related currCode="TWD">22735</cbc:Related>
+          <cbc:Total currCode="TWD">380364</cbc:Total>
+        </cbc:Revenues>
+        <cbc:ProfitOrLoss currCode="TWD">165055</cbc:ProfitOrLoss>
+        <cbc:TaxPaid currCode="TWD">22147</cbc:TaxPaid>
+        <cbc:TaxAccrued currCode="TWD">26215</cbc:TaxAccrued>
+        <cbc:Capital currCode="TWD">0</cbc:Capital>
+        <cbc:Earnings currCode="TWD">138569</cbc:Earnings>
+        <cbc:NbEmployees>21</cbc:NbEmployees>
+        <cbc:Assets currCode="TWD">80210</cbc:Assets>
+      </cbc:Summary>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>GB</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="GB">2367000221</cbc:TIN>
+          <cbc:Name>Shanghai Commercial Bank Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>GB</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>65 Cornhill</cbc:Street>
+              <cbc:BuildingIdentifier />
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode>ec3v 3nb</cbc:PostCode>
+              <cbc:City>London</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>GB</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC509</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>GB</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="GB">1924186998</cbc:TIN>
+          <cbc:Name>Shacom Property Holdings(BVI) Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>GB</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>Waterfront Drive</cbc:Street>
+              <cbc:BuildingIdentifier>Geneva Place</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName>Road Town</cbc:DistrictName>
+              <cbc:POB>3469</cbc:POB>
+              <cbc:PostCode />
+              <cbc:City>Tortola</cbc:City>
+              <cbc:CountrySubentity>VGB</cbc:CountrySubentity>
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>GB</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC513</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+    </cbc:CbcReports>
+    <cbc:CbcReports>
+      <cbc:DocSpec>
+        <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+        <stf:DocRefId>GB2018GBXBCBC1000000023CBC40120191121T095113001_03036306OECD1REPPA</stf:DocRefId>
+      </cbc:DocSpec>
+      <cbc:ResCountryCode>PA</cbc:ResCountryCode>
+      <cbc:Summary>
+        <cbc:Revenues>
+          <cbc:Unrelated currCode="TWD">4446</cbc:Unrelated>
+          <cbc:Related currCode="TWD">19042</cbc:Related>
+          <cbc:Total currCode="TWD">23488</cbc:Total>
+        </cbc:Revenues>
+        <cbc:ProfitOrLoss currCode="TWD">23415</cbc:ProfitOrLoss>
+        <cbc:TaxPaid currCode="TWD">0</cbc:TaxPaid>
+        <cbc:TaxAccrued currCode="TWD">0</cbc:TaxAccrued>
+        <cbc:Capital currCode="TWD">17551</cbc:Capital>
+        <cbc:Earnings currCode="TWD">1724014</cbc:Earnings>
+        <cbc:NbEmployees>1</cbc:NbEmployees>
+        <cbc:Assets currCode="TWD">0</cbc:Assets>
+      </cbc:Summary>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>PA</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="PA">NOTIN</cbc:TIN>
+          <cbc:Name>Empresa Inversiones Generales,S.A.</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>PA</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>Calle Aquilinon de la Guardia No. 8</cbc:Street>
+              <cbc:BuildingIdentifier />
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City>Panama</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>PA</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC511</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+    </cbc:CbcReports>
+    <cbc:CbcReports>
+      <cbc:DocSpec>
+        <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+        <stf:DocRefId>GB2018GBXBCBC1000000023CBC40120191121T095113001_03036306OECD1REPKY</stf:DocRefId>
+      </cbc:DocSpec>
+      <cbc:ResCountryCode>KY</cbc:ResCountryCode>
+      <cbc:Summary>
+        <cbc:Revenues>
+          <cbc:Unrelated currCode="TWD">0</cbc:Unrelated>
+          <cbc:Related currCode="TWD">10552</cbc:Related>
+          <cbc:Total currCode="TWD">10552</cbc:Total>
+        </cbc:Revenues>
+        <cbc:ProfitOrLoss currCode="TWD">9242</cbc:ProfitOrLoss>
+        <cbc:TaxPaid currCode="TWD">0</cbc:TaxPaid>
+        <cbc:TaxAccrued currCode="TWD">0</cbc:TaxAccrued>
+        <cbc:Capital currCode="TWD">5849</cbc:Capital>
+        <cbc:Earnings currCode="TWD">493019</cbc:Earnings>
+        <cbc:NbEmployees>1</cbc:NbEmployees>
+        <cbc:Assets currCode="TWD">0</cbc:Assets>
+      </cbc:Summary>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>KY</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="KY">NOTIN</cbc:TIN>
+          <cbc:Name>Krinein Company</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>KY</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street />
+              <cbc:BuildingIdentifier />
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB>500, Cardinal Avenue,Grand Cayman,Cayman Islands</cbc:POB>
+              <cbc:PostCode />
+              <cbc:City />
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>KY</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC511</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+    </cbc:CbcReports>
+    <cbc:CbcReports>
+      <cbc:DocSpec>
+        <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+        <stf:DocRefId>GB2018GBXBCBC1000000023CBC40120191121T095113001_03036306OECD1REPSG</stf:DocRefId>
+      </cbc:DocSpec>
+      <cbc:ResCountryCode>SG</cbc:ResCountryCode>
+      <cbc:Summary>
+        <cbc:Revenues>
+          <cbc:Unrelated currCode="TWD">300136</cbc:Unrelated>
+          <cbc:Related currCode="TWD">121</cbc:Related>
+          <cbc:Total currCode="TWD">300257</cbc:Total>
+        </cbc:Revenues>
+        <cbc:ProfitOrLoss currCode="TWD">-48900</cbc:ProfitOrLoss>
+        <cbc:TaxPaid currCode="TWD">0</cbc:TaxPaid>
+        <cbc:TaxAccrued currCode="TWD">0</cbc:TaxAccrued>
+        <cbc:Capital currCode="TWD">0</cbc:Capital>
+        <cbc:Earnings currCode="TWD">-157421</cbc:Earnings>
+        <cbc:NbEmployees>16</cbc:NbEmployees>
+        <cbc:Assets currCode="TWD">6779</cbc:Assets>
+      </cbc:Summary>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>SG</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="SG">T16FC0028L</cbc:TIN>
+          <cbc:IN issuedBy="SG">151040001</cbc:IN>
+          <cbc:Name>The Shanghai Commercial and Savings Bank,Ltd.</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>SG</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>3 Temasek Avenue</cbc:Street>
+              <cbc:BuildingIdentifier>#26-02 Centennial Tower</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode>039190</cbc:PostCode>
+              <cbc:City>Singapore</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>SG</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC509</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+    </cbc:CbcReports>
+    <cbc:CbcReports>
+      <cbc:DocSpec>
+        <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+        <stf:DocRefId>GB2018GBXBCBC1000000023CBC40120191121T095113001_03036306OECD1REPVN</stf:DocRefId>
+      </cbc:DocSpec>
+      <cbc:ResCountryCode>VN</cbc:ResCountryCode>
+      <cbc:Summary>
+        <cbc:Revenues>
+          <cbc:Unrelated currCode="TWD">114724</cbc:Unrelated>
+          <cbc:Related currCode="TWD">9716</cbc:Related>
+          <cbc:Total currCode="TWD">124440</cbc:Total>
+        </cbc:Revenues>
+        <cbc:ProfitOrLoss currCode="TWD">57685</cbc:ProfitOrLoss>
+        <cbc:TaxPaid currCode="TWD">8104</cbc:TaxPaid>
+        <cbc:TaxAccrued currCode="TWD">3431</cbc:TaxAccrued>
+        <cbc:Capital currCode="TWD">1844280</cbc:Capital>
+        <cbc:Earnings currCode="TWD">113671</cbc:Earnings>
+        <cbc:NbEmployees>25</cbc:NbEmployees>
+        <cbc:Assets currCode="TWD">757</cbc:Assets>
+      </cbc:Summary>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>VN</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="VN">3602414719</cbc:TIN>
+          <cbc:IN issuedBy="VN">151040001</cbc:IN>
+          <cbc:Name>The Shanghai Commercial and Savings Bank,Ltd.</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>VN</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street />
+              <cbc:BuildingIdentifier>Dong Nai BigC Commercial Center</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier>29</cbc:SuiteIdentifier>
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName>Long Binh Tan Ward</cbc:DistrictName>
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City>Bien Hoa</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>VN</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC509</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+    </cbc:CbcReports>
+    <cbc:CbcReports>
+      <cbc:DocSpec>
+        <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+        <stf:DocRefId>GB2018GBXBCBC1000000023CBC40120191121T095113001_03036306OECD1REPHK</stf:DocRefId>
+      </cbc:DocSpec>
+      <cbc:ResCountryCode>HK</cbc:ResCountryCode>
+      <cbc:Summary>
+        <cbc:Revenues>
+          <cbc:Unrelated currCode="TWD">19521605</cbc:Unrelated>
+          <cbc:Related currCode="TWD">2899407</cbc:Related>
+          <cbc:Total currCode="TWD">22421012</cbc:Total>
+        </cbc:Revenues>
+        <cbc:ProfitOrLoss currCode="TWD">10806611</cbc:ProfitOrLoss>
+        <cbc:TaxPaid currCode="TWD">2950082</cbc:TaxPaid>
+        <cbc:TaxAccrued currCode="TWD">1649508</cbc:TaxAccrued>
+        <cbc:Capital currCode="TWD">8557494</cbc:Capital>
+        <cbc:Earnings currCode="TWD">46569677</cbc:Earnings>
+        <cbc:NbEmployees>1702</cbc:NbEmployees>
+        <cbc:Assets currCode="TWD">16693840</cbc:Assets>
+      </cbc:Summary>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>HK</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="HK">38806876</cbc:TIN>
+          <cbc:IN issuedBy="HK">151040001</cbc:IN>
+          <cbc:Name>The Shanghai Commercial and Savings Bank,Ltd.</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>HK</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>18 Middle Rd.</cbc:Street>
+              <cbc:BuildingIdentifier>Peninsula Office Tower</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier>10</cbc:FloorIdentifier>
+              <cbc:DistrictName>Tsim Sha Tsui</cbc:DistrictName>
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City>Kowloon</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>HK</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC509</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>HK</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="HK">NOTIN</cbc:TIN>
+          <cbc:Name>Shanghai Commercial Bank Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>HK</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>12 Queen's Road Central</cbc:Street>
+              <cbc:BuildingIdentifier>Shanghai Commercial Bank Tower</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City />
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>HK</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC509</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>HK</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="HK">NOTIN</cbc:TIN>
+          <cbc:Name>Paofoong Insurance Co(HK) Ltd.</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>HK</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>12 Queen's Road Central</cbc:Street>
+              <cbc:BuildingIdentifier>Shanghai Commercial Bank Tower</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City />
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>HK</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC510</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>HK</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="HK">NOTIN</cbc:TIN>
+          <cbc:Name>Shanghai Commercial Bank (Nominees) Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>HK</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>12 Queen's Road Central</cbc:Street>
+              <cbc:BuildingIdentifier>Shanghai Commercial Bank Tower</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City />
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>HK</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC509</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>HK</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="HK">NOTIN</cbc:TIN>
+          <cbc:Name>Shanghai Commercial Bank Trustee Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>HK</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>100 How Ming Street</cbc:Street>
+              <cbc:BuildingIdentifier>Two Landmark East</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier>28</cbc:FloorIdentifier>
+              <cbc:DistrictName>Kwun Tong</cbc:DistrictName>
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City>Kowloon</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>HK</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC509</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>HK</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="HK">NOTIN</cbc:TIN>
+          <cbc:Name>Shacom Futures Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>HK</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>12 Queen's Road Central</cbc:Street>
+              <cbc:BuildingIdentifier>Shanghai Commercial Bank Tower</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City />
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>HK</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC509</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>HK</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="HK">NOTIN</cbc:TIN>
+          <cbc:Name>Shacom Investment Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>HK</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>12 Queen's Road Central</cbc:Street>
+              <cbc:BuildingIdentifier>Shanghai Commercial Bank Tower</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City />
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>HK</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC513</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>HK</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="HK">NOTIN</cbc:TIN>
+          <cbc:Name>Shacom Assets Investments Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>HK</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>12 Queen's Road Central</cbc:Street>
+              <cbc:BuildingIdentifier>Shanghai Commercial Bank Tower</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City />
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>HK</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC513</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>HK</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="HK">NOTIN</cbc:TIN>
+          <cbc:Name>Infinite Financial Solutions Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>HK</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>12 Queen's Road Central</cbc:Street>
+              <cbc:BuildingIdentifier>Shanghai Commercial Bank Tower</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City />
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>HK</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC506</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>HK</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="HK">NOTIN</cbc:TIN>
+          <cbc:Name>Shacom Insurance Brokers Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>HK</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>12 Queen's Road Central</cbc:Street>
+              <cbc:BuildingIdentifier>Shanghai Commercial Bank Tower</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City />
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>HK</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC510</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>HK</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="HK">NOTIN</cbc:TIN>
+          <cbc:Name>Shacom Securities Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>HK</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>12 Queen's Road Central</cbc:Street>
+              <cbc:BuildingIdentifier>Shanghai Commercial Bank Tower</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City />
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>HK</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC509</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>HK</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="HK">NOTIN</cbc:TIN>
+          <cbc:Name>Hai Kwang Property Management Company Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>HK</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>12 Queen's Road Central</cbc:Street>
+              <cbc:BuildingIdentifier>Shanghai Commercial Bank Tower</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName />
+              <cbc:POB />
+              <cbc:PostCode />
+              <cbc:City />
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>HK</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC513</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>HK</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="HK">NOTIN</cbc:TIN>
+          <cbc:Name>Right Honour Investments Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>HK</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>Wickhams Cay II</cbc:Street>
+              <cbc:BuildingIdentifier>Vistra Corporate Services Centre</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName>Road Town</cbc:DistrictName>
+              <cbc:POB />
+              <cbc:PostCode>VG1110</cbc:PostCode>
+              <cbc:City>Tortola</cbc:City>
+              <cbc:CountrySubentity>VGB</cbc:CountrySubentity>
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>HK</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC511</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>HK</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="HK">NOTIN</cbc:TIN>
+          <cbc:Name>Glory Step Westpoint Investments Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>HK</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>Wickhams Cay II</cbc:Street>
+              <cbc:BuildingIdentifier>Vistra Corporate Services Centre</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName>Road Town</cbc:DistrictName>
+              <cbc:POB />
+              <cbc:PostCode>VG1110</cbc:PostCode>
+              <cbc:City>Tortola</cbc:City>
+              <cbc:CountrySubentity>VGB</cbc:CountrySubentity>
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>HK</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC513</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>HK</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="HK">NOTIN</cbc:TIN>
+          <cbc:Name>Silver Wisdom Westpoint Investments Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>HK</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>Wickhams Cay II</cbc:Street>
+              <cbc:BuildingIdentifier>Vistra Corporate Services Centre</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName>Road Town</cbc:DistrictName>
+              <cbc:POB />
+              <cbc:PostCode>VG1110</cbc:PostCode>
+              <cbc:City>Tortola</cbc:City>
+              <cbc:CountrySubentity>VGB</cbc:CountrySubentity>
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>HK</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC513</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>HK</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="HK">NOTIN</cbc:TIN>
+          <cbc:Name>KCC 23F Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>HK</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>Wickhams Cay II</cbc:Street>
+              <cbc:BuildingIdentifier>Vistra Corporate Services Centre</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName>Road Town</cbc:DistrictName>
+              <cbc:POB />
+              <cbc:PostCode>VG1110</cbc:PostCode>
+              <cbc:City>Tortola</cbc:City>
+              <cbc:CountrySubentity>VGB</cbc:CountrySubentity>
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>HK</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC513</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>HK</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="HK">NOTIN</cbc:TIN>
+          <cbc:Name>KCC 25F Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>HK</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>Wickhams Cay II</cbc:Street>
+              <cbc:BuildingIdentifier>Vistra Corporate Services Centre</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName>Road Town</cbc:DistrictName>
+              <cbc:POB />
+              <cbc:PostCode>VG1110</cbc:PostCode>
+              <cbc:City>Tortola</cbc:City>
+              <cbc:CountrySubentity>VGB</cbc:CountrySubentity>
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>HK</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC513</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>HK</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="HK">NOTIN</cbc:TIN>
+          <cbc:Name>KCC 26F Limited</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>HK</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>Wickhams Cay II</cbc:Street>
+              <cbc:BuildingIdentifier>Vistra Corporate Services Centre</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName>Road Town</cbc:DistrictName>
+              <cbc:POB />
+              <cbc:PostCode>VG1110</cbc:PostCode>
+              <cbc:City>Tortola</cbc:City>
+              <cbc:CountrySubentity>VGB</cbc:CountrySubentity>
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>HK</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC513</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+    </cbc:CbcReports>
+    <cbc:CbcReports>
+      <cbc:DocSpec>
+        <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+        <stf:DocRefId>GB2018GBXBCBC1000000023CBC40120191121T095113001_03036306OECD1REPKH</stf:DocRefId>
+      </cbc:DocSpec>
+      <cbc:ResCountryCode>KH</cbc:ResCountryCode>
+      <cbc:Summary>
+        <cbc:Revenues>
+          <cbc:Unrelated currCode="TWD">1876512</cbc:Unrelated>
+          <cbc:Related currCode="TWD">0</cbc:Related>
+          <cbc:Total currCode="TWD">1876512</cbc:Total>
+        </cbc:Revenues>
+        <cbc:ProfitOrLoss currCode="TWD">371904</cbc:ProfitOrLoss>
+        <cbc:TaxPaid currCode="TWD">51829</cbc:TaxPaid>
+        <cbc:TaxAccrued currCode="TWD">54693</cbc:TaxAccrued>
+        <cbc:Capital currCode="TWD">920513</cbc:Capital>
+        <cbc:Earnings currCode="TWD">367841</cbc:Earnings>
+        <cbc:NbEmployees>2811</cbc:NbEmployees>
+        <cbc:Assets currCode="TWD">227558</cbc:Assets>
+      </cbc:Summary>
+      <cbc:ConstEntities>
+        <cbc:ConstEntity>
+          <cbc:ResCountryCode>KH</cbc:ResCountryCode>
+          <cbc:TIN issuedBy="KH">NOTIN</cbc:TIN>
+          <cbc:Name>AMK Microfinance Institution Plc.</cbc:Name>
+          <cbc:Address legalAddressType="OECD303">
+            <cbc:CountryCode>KH</cbc:CountryCode>
+            <cbc:AddressFix>
+              <cbc:Street>Yothapol Khemarak Phoumin Blvd</cbc:Street>
+              <cbc:BuildingIdentifier>Building 285</cbc:BuildingIdentifier>
+              <cbc:SuiteIdentifier />
+              <cbc:FloorIdentifier />
+              <cbc:DistrictName>Sk. Tomnub teuk, Kh. Chamkarmorn</cbc:DistrictName>
+              <cbc:POB>P.O Box 480</cbc:POB>
+              <cbc:PostCode />
+              <cbc:City>Phnom Penh</cbc:City>
+              <cbc:CountrySubentity />
+            </cbc:AddressFix>
+          </cbc:Address>
+        </cbc:ConstEntity>
+        <cbc:IncorpCountryCode>KH</cbc:IncorpCountryCode>
+        <cbc:BizActivities>CBC509</cbc:BizActivities>
+        <cbc:OtherEntityInfo>Reporting Entity</cbc:OtherEntityInfo>
+      </cbc:ConstEntities>
+    </cbc:CbcReports>
+  </cbc:CbcBody>
+</cbc:CBC_OECD>

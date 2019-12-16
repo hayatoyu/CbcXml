@@ -9,6 +9,8 @@ using NPOI.HSSF.UserModel;
 using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace CbcXml
 {
@@ -24,17 +26,33 @@ namespace CbcXml
                 input = Console.ReadLine();
                 if (input.Equals("1"))
                 {
+                    string xsdDirPath = @"Validation\{0}";
+                    string countryCode = "";
+                    string xsdFilePath = "";
+                    string xmlPath = "";
+                    string ns = "";
+                    NameSpaces spaces = JsonConvert.DeserializeObject<NameSpaces>(File.ReadAllText(string.Format(xsdDirPath, "Namespace.json")));
                     XmlValidator validator = new XmlValidator();
                     FileInfo[] fileInfos = currDir.GetFiles();
-                    string xmlpath = fileInfos.Where(f => f.Extension.Equals(".xml"))
+                    xmlPath = fileInfos.Where(f => f.Extension.Equals(".xml"))
                         .OrderByDescending(f => f.LastWriteTime)
                         .FirstOrDefault().FullName;
-                    
-                    /*
-                    validator.Validate("CbcXML_v1.0.1.xsd"
-                        , @"C:\Users\余\Source\Repos\CbcXml\CbcXml\bin\Debug\cbc-report_20181231T19_36_19.xml"
-                        , "urn:oecd:ties:cbc:v1");*/
-                    validator.Validate(@"CbC schema v1.0.1\CbcXML_v1.0.1.xsd",xmlpath,"urn:oecd:ties:cbc:v1");
+                    Console.WriteLine("請輸入國別代碼：");
+                    countryCode = Console.ReadLine();
+                    xsdDirPath = string.Format(xsdDirPath, countryCode);
+                    ns = spaces.NameSpaceList.Where(n => n.CountryCode.Equals(countryCode)).FirstOrDefault().Namespace;
+                    DirectoryInfo xsdDir = new DirectoryInfo(xsdDirPath);
+                    foreach(FileInfo file in xsdDir.GetFiles())
+                    {
+                        if (file.Name.StartsWith("Cbc"))
+                        {
+                            xsdFilePath = file.FullName;
+                            break;
+                        }
+                            
+                    }
+                    validator.Validate(xsdFilePath, xmlPath, ns);                    
+
                 }
                 else if (input.Equals("2"))
                 {
