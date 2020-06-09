@@ -1,3 +1,5 @@
 這是 Country By Country 國別報告書報稅資料的產生器英國版。(GB)
+有關CBC OECD Reporting 的介紹可參考：https://www.oecd.org/tax/beps/guidance-on-country-by-country-reporting-beps-action-13.htm
+
 將特定模板的Excel資料導入後，將轉為國別報告書可用的Xml資料，提供給英國政府。
 此外也有驗證產生之Xml是否合乎規格的功能(需使用xsd檔案進行驗證)。
